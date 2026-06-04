@@ -1,0 +1,30 @@
+{
+  "roles": {
+    "admin": {
+      "can_export": true,
+      "can_see_all_tables": true,
+      "max_query_complexity": 100
+    },
+    "analyst": {
+      "can_export": true,
+      "can_see_all_tables": false,
+      "protected_tables_blocked": true,
+      "max_query_complexity": 50
+    },
+    "viewer": {
+      "can_export": false,
+      "can_see_all_tables": false,
+      "protected_tables_blocked": true,
+      "max_query_complexity": 20
+    }
+  },
+  "protected_tables": [
+    "users",
+    "passwords",
+    "secrets",
+    "audit_log",
+    "sessions",
+    "config",
+    "credentials"
+  ]
+}

@@ -1,0 +1,65 @@
+/* Main App */
+.main {
+    padding: 1rem 2rem;
+    background-color: #F8FAFC;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #0F172A;
+    color: white;
+}
+
+/* Sidebar Text */
+section[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+/* Buttons */
+.stButton > button {
+    width: 100%;
+    border-radius: 12px;
+    height: 45px;
+    border: none;
+    background-color: #2563EB;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.stButton > button:hover {
+    background-color: #1D4ED8;
+    color: white;
+}
+
+/* Text Area */
+.stTextArea textarea {
+    border-radius: 12px;
+    border: 1px solid #CBD5E1;
+}
+
+/* Input Boxes */
+.stTextInput input {
+    border-radius: 10px;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Metric Cards */
+[data-testid="metric-container"] {
+    background-color: white;
+    border-radius: 14px;
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #0F172A;
+}

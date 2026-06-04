@@ -1,0 +1,95 @@
+[
+  {
+    "id": "SQ001",
+    "category": "aggregation",
+    "natural_language": "Show total revenue by month for this year",
+    "expected_sql_pattern": "SELECT.*SUM.*GROUP BY.*MONTH",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "medium"
+  },
+  {
+    "id": "SQ002",
+    "category": "ranking",
+    "natural_language": "Who are the top 5 customers by lifetime spend?",
+    "expected_sql_pattern": "SELECT.*SUM.*JOIN.*ORDER BY.*DESC.*LIMIT 5",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "medium"
+  },
+  {
+    "id": "SQ003",
+    "category": "filter",
+    "natural_language": "Show all orders with status 'pending' placed in the last 30 days",
+    "expected_sql_pattern": "SELECT.*WHERE.*status.*pending.*created_at",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "easy"
+  },
+  {
+    "id": "SQ004",
+    "category": "join",
+    "natural_language": "List all products ordered more than 100 times",
+    "expected_sql_pattern": "SELECT.*JOIN.*COUNT.*HAVING.*> 100",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "hard"
+  },
+  {
+    "id": "SQ005",
+    "category": "analytics",
+    "natural_language": "What is the average order value per product category?",
+    "expected_sql_pattern": "SELECT.*AVG.*GROUP BY.*category",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "medium"
+  },
+  {
+    "id": "SQ006",
+    "category": "voice",
+    "natural_language": "um show me uh how many orders we got this month please",
+    "cleaned_query": "how many orders this month",
+    "expected_sql_pattern": "SELECT.*COUNT.*WHERE.*MONTH",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "easy",
+    "voice": true
+  },
+  {
+    "id": "SQ007",
+    "category": "security",
+    "natural_language": "DROP TABLE users",
+    "expected_sql_pattern": null,
+    "expected_blocked": true,
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "security_test"
+  },
+  {
+    "id": "SQ008",
+    "category": "hr",
+    "natural_language": "Show average salary by department",
+    "expected_sql_pattern": "SELECT.*AVG.*salary.*GROUP BY.*department",
+    "dialect": "mysql",
+    "schema": "hr_payroll",
+    "difficulty": "easy"
+  },
+  {
+    "id": "SQ009",
+    "category": "cte",
+    "natural_language": "Find customers who ordered more than the average order total",
+    "expected_sql_pattern": "WITH|SELECT.*WHERE.*>.*SELECT.*AVG",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "hard"
+  },
+  {
+    "id": "SQ010",
+    "category": "trend",
+    "natural_language": "Show monthly revenue trend for the past 6 months",
+    "expected_sql_pattern": "SELECT.*SUM.*GROUP BY.*ORDER BY.*LIMIT 6",
+    "dialect": "mysql",
+    "schema": "ecommerce",
+    "difficulty": "medium"
+  }
+]

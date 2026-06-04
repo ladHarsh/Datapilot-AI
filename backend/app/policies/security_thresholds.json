@@ -1,0 +1,18 @@
+{
+  "query_execution": {
+    "global_timeout_seconds": 30,
+    "max_joins": 5,
+    "max_subqueries": 3,
+    "max_rows_retrieval": 100000
+  },
+  "api_protection": {
+    "rate_limit_per_minute": 100,
+    "max_payload_size_bytes": 1048576,
+    "max_login_attempts": 5,
+    "login_lockout_minutes": 15
+  },
+  "risk_scoring": {
+    "high_risk_threshold": 70,
+    "medium_risk_threshold": 40
+  }
+}

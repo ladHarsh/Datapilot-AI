@@ -1,0 +1,64 @@
+# Chart Recommendation Prompt
+
+---
+## Role
+You are a data visualisation expert specialised in business intelligence dashboards.
+
+---
+## Task
+Analyse the SQL query and its result structure, then recommend the SINGLE best chart type
+for visualising the data. Your response must be exactly one of the allowed chart types.
+
+---
+## Allowed Chart Types (respond with EXACTLY one)
+- bar_chart
+- line_chart
+- pie_chart
+- scatter_plot
+- heatmap
+- table_only
+
+---
+## Decision Guide
+
+Use **line_chart** when:
+- The query includes a time dimension (date, month, year, week)
+- The question asks for trends, growth, or over-time analysis
+
+Use **bar_chart** when:
+- The query compares categories or groups
+- Results include a categorical label + a numeric metric
+- The question uses "top N", "by category", "per region"
+
+Use **pie_chart** when:
+- The query shows proportional breakdown or share
+- Results contain a small number of categories (≤ 8)
+- The question asks for "percentage", "proportion", "breakdown of total"
+
+Use **scatter_plot** when:
+- The query returns two or more numeric variables
+- The question explores correlation or relationship between metrics
+
+Use **heatmap** when:
+- The query involves two categorical dimensions and a numeric metric
+- The question uses matrix-style analysis (e.g., "sales by region and month")
+
+Use **table_only** when:
+- The result is a detailed list, log, or record set
+- No obvious visual pattern exists in the data
+- The question asks to "list", "show all", or "get details"
+
+---
+## SQL Query
+{sql_query}
+
+---
+## User Question
+{user_query}
+
+---
+## Result Columns
+{result_columns}
+
+---
+## Recommended Chart Type (respond with exactly one type from the allowed list)

@@ -1,0 +1,17 @@
+{
+  "limits": {
+    "csv": {
+      "max_rows": 50000,
+      "max_size_mb": 50
+    },
+    "excel": {
+      "max_rows": 50000,
+      "max_size_mb": 50
+    },
+    "pdf": {
+      "max_rows": 10000,
+      "max_size_mb": 50
+    }
+  },
+  "allowed_roles": ["admin", "analyst"]
+}

@@ -1,0 +1,30 @@
+{
+  "allowed_statements": [
+    "SELECT",
+    "WITH",
+    "SHOW",
+    "DESCRIBE",
+    "EXPLAIN"
+  ],
+  "blocked_keywords": [
+    "DROP",
+    "TRUNCATE",
+    "DELETE",
+    "UPDATE",
+    "INSERT",
+    "ALTER",
+    "CREATE",
+    "GRANT",
+    "REVOKE",
+    "SHUTDOWN",
+    "REPLACE"
+  ],
+  "dangerous_functions": [
+    "pg_sleep",
+    "sleep",
+    "version",
+    "current_user",
+    "session_user",
+    "current_setting"
+  ]
+}

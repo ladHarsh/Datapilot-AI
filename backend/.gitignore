@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment files (NEVER commit real credentials)
+.env
+*.env
+
+# Logs
+logs/
+*.log
+
+# Exports
+exports/
+
+# Uploaded user databases
+uploads/
+
+# SQLite dev DB
+*.db
+*.sqlite3
+
+# Scratch files
+scratch/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test artefacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
