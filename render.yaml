@@ -27,6 +27,7 @@ services:
       - key: BACKEND_URL
         fromService:
           name: datapilot-backend
+          type: web
           property: host
 
 databases:
