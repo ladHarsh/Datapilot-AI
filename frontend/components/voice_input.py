@@ -40,9 +40,23 @@ def _join_schema_words(transcript: str, tokens: Dict[str, Tuple[str, str]]) -> s
 
 def _listen_and_transcribe() -> str:
     """Natively listens to the live microphone and returns transcript."""
-    import speech_recognition as sr
+    try:
+        import speech_recognition as sr
+    except ImportError:
+        raise RuntimeError("SpeechRecognition library is not installed. Voice recognition is only supported when running locally.")
+        
+    try:
+        import pyaudio
+    except ImportError:
+        raise RuntimeError("PyAudio library is not installed. Voice recognition is only supported when running locally.")
+
     recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
+    try:
+        mic = sr.Microphone()
+    except Exception:
+        raise RuntimeError("No microphone access. Voice input is only supported when running locally with a connected microphone.")
+
+    with mic as source:
         # Fast adjustment for ambient noise to optimize response time
         recognizer.adjust_for_ambient_noise(source, duration=0.3)
         # 6 seconds timeout is optimal for quick conversational queries
