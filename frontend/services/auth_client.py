@@ -19,16 +19,18 @@ def signup_user(username, email, password):
                 "email": email,
                 "password": password
             },
-            timeout=10
+            timeout=12
         )
         if response.status_code == 201:
             return True, "Success"
+        elif response.status_code in (502, 503, 504):
+            return False, "⏳ The backend database engine is waking up from sleep (Render free tier cold-start takes ~50 seconds). Please try again in a moment."
         elif response.status_code == 400:
             return False, response.json().get("detail", "Signup failed")
         else:
             return False, f"Server error: {response.status_code}"
-    except Exception as e:
-        return False, f"Connection failed: {str(e)}"
+    except Exception:
+        return False, "⏳ The backend database engine is waking up from sleep or connection failed. Please wait a moment and try again."
 
 def login_user(username, password):
     try:
@@ -39,7 +41,7 @@ def login_user(username, password):
                 "username": username,
                 "password": password
             },
-            timeout=10
+            timeout=12
         )
         if response.status_code == 200:
             data = response.json()
@@ -56,7 +58,7 @@ def login_user(username, password):
             if me_response.status_code == 200:
                 user_data = me_response.json().get("data", {})
                 return {"success": True, "user": user_data}
-
+ 
             detail = "Session validation failed"
             try:
                 detail = me_response.json().get("detail", detail)
@@ -64,9 +66,11 @@ def login_user(username, password):
                 pass
             return {"success": False, "error": detail}
                 
+        elif response.status_code in (502, 503, 504):
+            return {"success": False, "error": "⏳ The backend database engine is waking up from sleep (Render free tier cold-start takes ~50 seconds). Please try again in a moment."}
         elif response.status_code == 401:
             return {"success": False, "error": "Invalid credentials."}
         else:
             return {"success": False, "error": f"Server error: {response.status_code}"}
-    except Exception as e:
-        return {"success": False, "error": f"Connection failed: {str(e)}"}
+    except Exception:
+        return {"success": False, "error": "⏳ The backend database engine is waking up from sleep or connection failed. Please wait a moment and try again."}

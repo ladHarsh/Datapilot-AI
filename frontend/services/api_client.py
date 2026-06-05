@@ -26,6 +26,11 @@ def _parse_response(response):
     try:
         body = response.json()
     except Exception:
+        if response.status_code in (502, 503, 504):
+            return {
+                "success": False,
+                "message": "⏳ The database engine backend is waking up from sleep (Render free tier cold-start takes ~50 seconds). Please wait a moment and try again!"
+            }
         return {"success": False, "message": response.text or f"HTTP {response.status_code}"}
 
     if response.status_code == 401:
