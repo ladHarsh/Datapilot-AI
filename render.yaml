@@ -1,0 +1,35 @@
+services:
+  # 1. FastAPI Backend Service
+  - type: web
+    name: datapilot-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    rootDir: backend
+    envVars:
+      - key: LLM_PROVIDER
+        value: openai
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: INTERNAL_DB_URL
+        fromDatabase:
+          name: datapilot-db
+          property: connectionString
+
+  # 2. Streamlit Frontend Service
+  - type: web
+    name: datapilot-frontend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    rootDir: frontend
+    envVars:
+      - key: BACKEND_URL
+        fromService:
+          name: datapilot-backend
+          property: host
+
+databases:
+  # 3. PostgreSQL Database State Store
+  - name: datapilot-db
+    plan: free

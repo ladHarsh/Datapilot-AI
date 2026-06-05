@@ -1,7 +1,8 @@
+import os
 import requests
 import streamlit as st
 
-BASE_URL = "http://127.0.0.1:8000/api/v1/auth"
+BASE_URL = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000").rstrip("/") + "/api/v1/auth"
 
 def signup_user(username, email, password):
     try:

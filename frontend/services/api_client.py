@@ -2,10 +2,11 @@ import json
 import requests
 import streamlit as st
 
+import os
 from utils.db_helpers import first_table_name, normalize_db_info
 
 # Backend API endpoint (with version prefix)
-BASE_URL = "http://127.0.0.1:8000/api/v1"
+BASE_URL = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000").rstrip("/") + "/api/v1"
 
 
 def get_headers():
