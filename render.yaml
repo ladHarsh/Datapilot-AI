@@ -29,10 +29,7 @@ services:
     rootDir: frontend
     envVars:
       - key: BACKEND_URL
-        fromService:
-          name: datapilot-backend
-          type: web
-          property: url
+        sync: false
       - key: PYTHON_VERSION
         value: 3.11.9
 
