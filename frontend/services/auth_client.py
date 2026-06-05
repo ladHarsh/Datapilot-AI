@@ -5,7 +5,10 @@ import streamlit as st
 backend_url = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000").strip()
 if not backend_url.startswith(("http://", "https://")):
     backend_url = f"http://{backend_url}"
-BASE_URL = backend_url.rstrip("/") + "/api/v1/auth"
+backend_url = backend_url.rstrip("/")
+if backend_url.endswith("/api/v1"):
+    backend_url = backend_url[:-7]
+BASE_URL = backend_url + "/api/v1/auth"
 
 def signup_user(username, email, password):
     try:

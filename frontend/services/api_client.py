@@ -8,7 +8,10 @@ from utils.db_helpers import first_table_name, normalize_db_info
 backend_url = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000").strip()
 if not backend_url.startswith(("http://", "https://")):
     backend_url = f"http://{backend_url}"
-BASE_URL = backend_url.rstrip("/") + "/api/v1"
+backend_url = backend_url.rstrip("/")
+if backend_url.endswith("/api/v1"):
+    backend_url = backend_url[:-7]
+BASE_URL = backend_url + "/api/v1"
 
 
 def get_headers():
