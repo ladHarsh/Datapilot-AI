@@ -32,7 +32,7 @@ services:
         fromService:
           name: datapilot-backend
           type: web
-          property: host
+          property: url
       - key: PYTHON_VERSION
         value: 3.11.9
 

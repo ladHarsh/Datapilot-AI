@@ -5,8 +5,10 @@ import streamlit as st
 import os
 from utils.db_helpers import first_table_name, normalize_db_info
 
-# Backend API endpoint (with version prefix)
-BASE_URL = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000").rstrip("/") + "/api/v1"
+backend_url = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000").strip()
+if not backend_url.startswith(("http://", "https://")):
+    backend_url = f"http://{backend_url}"
+BASE_URL = backend_url.rstrip("/") + "/api/v1"
 
 
 def get_headers():
