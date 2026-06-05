@@ -81,7 +81,7 @@ _CSS = """
     }
     .kpi-value { font-size: 0.85rem !important; }
     .kpi-label { font-size: 0.58rem !important; }
-    .kpi-sub { font-size: 0.55rem !important; }
+    .kpi-sub { display: none !important; }
 }
 @media (max-width: 375px) {
     .kpi-card {

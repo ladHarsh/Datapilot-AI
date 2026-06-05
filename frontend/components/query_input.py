@@ -581,19 +581,52 @@ div[class^="sug-row-anchor"] + div.element-container div[data-testid="column"] [
     .qin-sub { font-size: 0.68rem !important; }
     .sug-header { font-size: 0.65rem !important; margin-top: 6px !important; }
 
-    /* Suggestion chips: 2-column on tablet/mobile */
+    /* Compact textarea on mobile */
+    div[data-testid="stTextArea"] textarea {
+        height: 64px !important;
+        min-height: 64px !important;
+        padding: 8px 12px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Action buttons responsive spacing and heights */
+    div.element-container:has(.action-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] [data-testid="stButton"] button {
+        height: 34px !important;
+        min-height: 34px !important;
+        font-size: 0.8rem !important;
+        border-radius: 8px !important;
+    }
+
+    /* Suggestion chips: premium horizontal scroll layout on mobile */
     div[class^="sug-row-anchor"] + div.element-container div[data-testid="stHorizontalBlock"] {
-        flex-wrap: wrap !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 6px !important;
+        width: 100% !important;
+        padding-bottom: 6px !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    div[class^="sug-row-anchor"] + div.element-container div[data-testid="stHorizontalBlock"]::-webkit-scrollbar {
+        height: 3px !important;
+    }
+    div[class^="sug-row-anchor"] + div.element-container div[data-testid="stHorizontalBlock"]::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.3) !important;
+        border-radius: 2px !important;
     }
     div[class^="sug-row-anchor"] + div.element-container div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"] {
-        flex: 1 1 48% !important;
-        max-width: 48% !important;
-        min-width: 48% !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: 220px !important;
+        min-width: 150px !important;
+        margin: 0 !important;
     }
     div[class^="sug-row-anchor"] + div.element-container div[data-testid="column"] [data-testid="stButton"] button {
         font-size: 0.72rem !important;
-        min-height: 40px !important;
-        padding: 5px 8px !important;
+        min-height: 36px !important;
+        padding: 4px 8px !important;
+        white-space: nowrap !important;
     }
 
     /* Voice card compact */
@@ -605,16 +638,28 @@ div[class^="sug-row-anchor"] + div.element-container div[data-testid="column"] [
     .qin-title { font-size: 0.78rem !important; }
     .qin-sub { font-size: 0.6rem !important; }
 
-    /* Suggestion chips: 1 column on small mobile, compact button padding and text */
+    div[data-testid="stTextArea"] textarea {
+        height: 52px !important;
+        min-height: 52px !important;
+        padding: 6px 10px !important;
+        font-size: 0.76rem !important;
+    }
+
+    div.element-container:has(.action-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] [data-testid="stButton"] button {
+        height: 30px !important;
+        min-height: 30px !important;
+        font-size: 0.74rem !important;
+        border-radius: 6px !important;
+    }
+
     div[class^="sug-row-anchor"] + div.element-container div[data-testid="stHorizontalBlock"] > div[data-testid="stColumn"] {
-        flex: 1 1 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
+        max-width: 180px !important;
+        min-width: 120px !important;
     }
     div[class^="sug-row-anchor"] + div.element-container div[data-testid="column"] [data-testid="stButton"] button {
         font-size: 0.68rem !important;
-        min-height: 32px !important;
-        padding: 3px 6px !important;
+        min-height: 30px !important;
+        padding: 2px 6px !important;
     }
 
     /* Voice card compact */

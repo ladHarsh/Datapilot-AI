@@ -207,6 +207,14 @@ div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) {
     div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) {
         padding: 12px 10px !important;
     }
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) [data-testid="stAlert"] {
+        padding: 8px 10px !important;
+        margin-bottom: 8px !important;
+    }
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) [data-testid="stAlert"] p,
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) [data-testid="stAlert"] span {
+        font-size: 0.78rem !important;
+    }
     .premium-result-title { font-size: 0.88rem !important; }
     
     /* Segmented control tabs for mobile */
@@ -299,6 +307,14 @@ div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) {
     div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) {
         padding: 10px 8px !important;
         margin-top: 8px !important;
+    }
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) [data-testid="stAlert"] {
+        padding: 6px 8px !important;
+        margin-bottom: 6px !important;
+    }
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) [data-testid="stAlert"] p,
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.premium-result-marker) [data-testid="stAlert"] span {
+        font-size: 0.72rem !important;
     }
     
     /* Segmented control tabs for micro viewports */

@@ -42,6 +42,10 @@ _CSS = """
         font-size: 0.62rem !important;
         padding: 1px 6px !important;
     }
+    div[data-testid="stDataFrame"] {
+        max-height: 280px !important;
+        overflow-y: auto !important;
+    }
 }
 @media (max-width: 480px) {
     .result-section-label {
@@ -52,6 +56,10 @@ _CSS = """
     .result-row-badge {
         font-size: 0.58rem !important;
         padding: 1px 4px !important;
+    }
+    div[data-testid="stDataFrame"] {
+        max-height: 220px !important;
+        overflow-y: auto !important;
     }
 }
 </style>

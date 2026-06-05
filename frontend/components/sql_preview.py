@@ -89,6 +89,16 @@ _CSS = """
         padding: 8px 10px !important;
         font-size: 0.78rem !important;
     }
+    div.sql-preview-card code,
+    div.sql-preview-card pre,
+    div.sql-preview-card [data-testid="stCode"] code {
+        font-size: 0.72rem !important;
+        padding: 8px !important;
+    }
+    div.sql-preview-card [data-testid="stCode"] {
+        max-height: 250px !important;
+        overflow-y: auto !important;
+    }
 }
 @media (max-width: 480px) {
     .sql-preview-card { padding: 8px 10px !important; }
@@ -106,6 +116,16 @@ _CSS = """
     .sql-status-dot {
         width: 5px !important;
         height: 5px !important;
+    }
+    div.sql-preview-card code,
+    div.sql-preview-card pre,
+    div.sql-preview-card [data-testid="stCode"] code {
+        font-size: 0.68rem !important;
+        padding: 6px !important;
+    }
+    div.sql-preview-card [data-testid="stCode"] {
+        max-height: 180px !important;
+        overflow-y: auto !important;
     }
 }
 </style>

@@ -214,38 +214,59 @@ def render_disconnect_button():
     @media (max-width: 768px) {
         div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"],
         div.element-container:has(.disconnect-row-anchor) + div.element-container div.stHorizontalBlock {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 8px !important;
             margin-top: -12px !important;
-            flex-wrap: wrap !important;
+            margin-bottom: 4px !important;
         }
-        div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] > div,
-        div.element-container:has(.disconnect-row-anchor) + div.element-container div.stHorizontalBlock > div {
-            flex: 1 1 100% !important;
-            max-width: 100% !important;
-            min-width: 100% !important;
+        div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] > div:first-child {
+            flex: 1 1 65% !important;
+            max-width: 65% !important;
+            min-width: 0 !important;
+        }
+        div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] > div:last-child {
+            flex: 0 0 35% !important;
+            max-width: 35% !important;
+            min-width: 95px !important;
         }
         .active-db-bar {
             width: 100% !important;
             justify-content: flex-start !important;
+            padding: 0 10px !important;
+            height: 36px !important;
         }
         div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] [data-testid="stButton"] button,
         div.element-container:has(.disconnect-row-anchor) + div.element-container div.stHorizontalBlock [data-testid="stButton"] button {
             height: 36px !important;
             min-height: 36px !important;
             font-size: 0.78rem !important;
-            margin-top: 6px !important;
+            margin-top: 0px !important;
         }
     }
     @media (max-width: 480px) {
+        div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] > div:first-child {
+            flex: 1 1 60% !important;
+            max-width: 60% !important;
+        }
+        div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] > div:last-child {
+            flex: 0 0 40% !important;
+            max-width: 40% !important;
+            min-width: 85px !important;
+        }
         .active-db-bar {
             height: 32px !important;
-            padding: 0 10px !important;
+            padding: 0 6px !important;
         }
         .active-db-name {
             font-size: 0.76rem !important;
         }
         .active-db-type {
             font-size: 0.64rem !important;
-            padding: 1px 6px !important;
+            padding: 1px 4px !important;
         }
         .active-db-dot {
             width: 6px !important;
@@ -256,13 +277,13 @@ def render_disconnect_button():
             height: 32px !important;
             min-height: 32px !important;
             font-size: 0.74rem !important;
-            margin-top: 4px !important;
+            margin-top: 0px !important;
         }
         div.element-container:has(.disconnect-row-anchor) + div.element-container div[data-testid="stHorizontalBlock"] [data-testid="stButton"] button::before,
         div.element-container:has(.disconnect-row-anchor) + div.element-container div.stHorizontalBlock [data-testid="stButton"] button::before {
             width: 11px !important;
             height: 11px !important;
-            margin-right: 5px !important;
+            margin-right: 4px !important;
         }
     }
     </style>

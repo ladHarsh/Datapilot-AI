@@ -35,9 +35,19 @@ _TITLE_COLOR = "#E2E8F0"
 _BASE_LAYOUT = dict(
     paper_bgcolor=_PAPER_BG,
     plot_bgcolor=_CHART_BG,
-    font=dict(color=_FONT_COLOR, family="Inter, sans-serif", size=12),
-    margin=dict(t=40, l=30, r=20, b=30),
-    legend=dict(bgcolor="rgba(0,0,0,0)", borderwidth=0, font=dict(color=_FONT_COLOR)),
+    font=dict(color=_FONT_COLOR, family="Inter, sans-serif", size=11),
+    margin=dict(t=40, l=45, r=20, b=65),
+    legend=dict(
+        bgcolor="rgba(0,0,0,0)",
+        borderwidth=0,
+        font=dict(color=_FONT_COLOR, size=10),
+        orientation="h",
+        yanchor="top",
+        y=-0.22,
+        xanchor="center",
+        x=0.5
+    ),
+    height=330,
 )
 
 
@@ -438,36 +448,50 @@ div[data-testid="stTabs"] [aria-selected="true"] {
 /* ── Responsive Charts ── */
 @media (max-width: 768px) {
     div[data-testid="stTabs"] [data-baseweb="tab-list"] {
-        padding: 3px !important;
+        padding: 2px !important;
         border-radius: 8px !important;
         gap: 2px !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none !important;
+        display: flex !important;
+        flex-direction: row !important;
         flex-wrap: nowrap !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+        overflow: hidden !important;
     }
     div[data-testid="stTabs"] [data-baseweb="tab-list"]::-webkit-scrollbar {
         display: none !important;
     }
     div[data-testid="stTabs"] [data-baseweb="tab"] {
-        padding: 4px 10px !important;
-        font-size: 0.75rem !important;
+        padding: 5px 2px !important;
+        font-size: 0.68rem !important;
         white-space: nowrap !important;
-        flex-shrink: 0 !important;
+        flex: 1 1 0% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        text-align: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
     }
     .chart-section-label { font-size: 0.68rem !important; margin: 10px 0 6px 0 !important; }
     .narrative-box { padding: 10px 12px !important; font-size: 0.82rem !important; }
     .ic { min-width: 100% !important; padding: 10px 12px !important; }
     .ic-title { font-size: 0.78rem !important; }
     .ic-body { font-size: 0.72rem !important; }
+    div[data-testid="stPlotlyChart"] .modebar-container {
+        display: none !important;
+    }
+    div[data-testid="stPlotlyChart"] .modebar {
+        display: none !important;
+    }
 }
 @media (max-width: 480px) {
     div[data-testid="stTabs"] [data-baseweb="tab-list"] {
         padding: 2px !important;
+        gap: 1px !important;
     }
     div[data-testid="stTabs"] [data-baseweb="tab"] {
-        padding: 4px 8px !important;
-        font-size: 0.72rem !important;
+        padding: 4px 1px !important;
+        font-size: 0.60rem !important;
     }
 }
 </style>

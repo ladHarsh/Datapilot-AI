@@ -44,6 +44,7 @@ DataPilot AI is a production-ready **natural language database query engine**. C
 | **Intent Classification** | Conversational vs Database query detection for a better UX, avoiding unnecessary SQL generation |
 | **Large File Support** | Upload support for up to 500MB files for CSV, SQLite, DB, and SQL formats |
 | **Extended Sessions** | Configurable, secure 7-day extended JWT login sessions for better usability |
+| **Mobile-First UI** | Full responsive optimization (320px–480px) with segmented controls, horizontal tag quick suggestions, vertical stats grid, and bottom-sheet reconnect modals |
 
 ---
 

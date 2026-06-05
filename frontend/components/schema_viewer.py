@@ -137,35 +137,37 @@ def render_schema_viewer():
     /* ── Responsive Schema Viewer ── */
     @media (max-width: 768px) {
         .schema-card {
-            padding: 10px 10px 8px 10px !important;
-            border-radius: 12px !important;
+            padding: 8px 8px 6px 8px !important;
+            border-radius: 10px !important;
+            margin-bottom: 6px !important;
         }
         .schema-scroll-body {
-            max-height: 280px !important;
+            max-height: 200px !important;
         }
-        .schema-header { margin-bottom: 8px !important; }
-        .schema-title { font-size: 0.82rem !important; }
-        .schema-count-badge { font-size: 0.65rem !important; padding: 1px 6px !important; }
-        .schema-dataset-chip { font-size: 0.68rem !important; padding: 2px 8px !important; }
-        .schema-table-block { padding: 6px 8px !important; margin-bottom: 6px !important; }
-        .schema-table-name { font-size: 0.76rem !important; margin-bottom: 4px !important; }
-        .schema-col-row { font-size: 0.72rem !important; }
-        .schema-col-type { font-size: 0.62rem !important; }
+        .schema-header { margin-bottom: 6px !important; }
+        .schema-title { font-size: 0.8rem !important; }
+        .schema-count-badge { font-size: 0.62rem !important; padding: 1px 4px !important; }
+        .schema-dataset-chip { font-size: 0.65rem !important; padding: 2px 6px !important; margin-bottom: 6px !important; }
+        .schema-table-block { padding: 4px 6px !important; margin-bottom: 4px !important; border-radius: 8px !important; }
+        .schema-table-name { font-size: 0.74rem !important; margin-bottom: 3px !important; }
+        .schema-col-row { font-size: 0.7rem !important; padding: 1px 0 !important; }
+        .schema-col-type { font-size: 0.6rem !important; }
     }
     @media (max-width: 480px) {
-        .schema-scroll-body { max-height: 180px !important; }
-        .schema-card { padding: 8px 8px 6px 8px !important; }
-        .schema-title { font-size: 0.78rem !important; }
-        .schema-table-name { font-size: 0.72rem !important; margin-bottom: 2px !important; }
-        .schema-col-row { font-size: 0.68rem !important; padding: 1px 0 !important; }
-        .schema-col-type { font-size: 0.6rem !important; }
+        .schema-scroll-body { max-height: 140px !important; }
+        .schema-card { padding: 6px 6px 4px 6px !important; border-radius: 8px !important; }
+        .schema-header { margin-bottom: 4px !important; gap: 6px !important; }
+        .schema-title { font-size: 0.76rem !important; }
+        .schema-table-name { font-size: 0.68rem !important; margin-bottom: 1px !important; }
+        .schema-col-row { font-size: 0.64rem !important; padding: 0.5px 0 !important; }
+        .schema-col-type { font-size: 0.58rem !important; }
         .schema-col-dot { width: 3px !important; height: 3px !important; }
-        .schema-key-badge { font-size: 0.55rem !important; padding: 0 2px !important; }
-        .schema-count-badge { font-size: 0.6rem !important; padding: 1px 4px !important; }
-        .schema-dataset-chip { font-size: 0.62rem !important; padding: 1px 6px !important; margin-bottom: 6px !important; }
+        .schema-key-badge { font-size: 0.52rem !important; padding: 0 1px !important; }
+        .schema-count-badge { font-size: 0.58rem !important; padding: 0.5px 3px !important; }
+        .schema-dataset-chip { font-size: 0.6rem !important; padding: 1px 4px !important; margin-bottom: 4px !important; }
     }
     @media (max-width: 375px) {
-        .schema-scroll-body { max-height: 150px !important; }
+        .schema-scroll-body { max-height: 120px !important; }
     }
     </style>
     """, unsafe_allow_html=True)
