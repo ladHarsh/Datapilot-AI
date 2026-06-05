@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="frontend/assets/logo.png" alt="DataPilot AI Logo" width="120" />
+  <img src="https://img.shields.io/badge/🧭-DataPilot_AI-6366F1?style=for-the-badge" alt="DataPilot AI" />
 </p>
 
-<h1 align="center">DataPilot AI</h1>
+<h1 align="center">🧭 DataPilot AI</h1>
 
 <h3 align="center">Natural Language → SQL · Execute · Analyze · Visualize</h3>
 
