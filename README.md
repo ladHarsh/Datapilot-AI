@@ -1,16 +1,18 @@
 <div align="center">
 
-# 🧭 DataPilot AI
+<h1>🧭 DataPilot AI</h1>
 
-### Natural Language → SQL · Execute · Analyze · Visualize
+<h3>Natural Language → SQL · Execute · Analyze · Visualize</h3>
 
-**Talk to your database in plain English. Get SQL, results, and business insights in seconds.**
+<p><strong>Talk to your database in plain English. Get SQL, results, and business insights in seconds.</strong></p>
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
-[![LangGraph](https://img.shields.io/badge/LangGraph-Orchestration-412991?style=flat-square)](https://github.com/langchain-ai/langgraph)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+<p>
+  <a href="https://python.org"><img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"></a>
+  <a href="https://fastapi.tiangolo.com"><img src="https://img.shields.io/badge/FastAPI-0.115-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"></a>
+  <a href="https://streamlit.io"><img src="https://img.shields.io/badge/Streamlit-Frontend-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"></a>
+  <a href="https://github.com/langchain-ai/langgraph"><img src="https://img.shields.io/badge/LangGraph-Orchestration-412991?style=flat-square" alt="LangGraph"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License"></a>
+</p>
 
 </div>
 
